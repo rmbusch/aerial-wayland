@@ -73,8 +73,8 @@ set_update_timeout() {
 }
 
 move_scripts() {
-    cp ./src/main.sh "$install_dir/aerial-update.sh"
-    cp ./src/updater.sh "$install_dir/aerial-wayland.sh"
+    cp ./src/main.sh "$install_dir/aerial-wayland.sh"
+    cp ./src/updater.sh "$install_dir/aerial-update.sh"
     chmod +x "$install_dir/aerial-update.sh"
     chmod +x "$install_dir/aerial-wayland.sh"
     echo "Scripts installed and configuration initialized in $install_dir"
