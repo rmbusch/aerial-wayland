@@ -14,12 +14,7 @@ cleanup() {
 
 trap cleanup SIGTERM SIGINT
 
-yad --notification \
-    --image="preferences-desktop-screensaver" \
-    --text="Aerial Wayland" \
-    --menu="Exit!kill -SIGTERM $$!system-shutdown|About!yad --info --text='Aerial Wayland Screensaver'!help-about" &
-
-cmd="mpv --no-audio --really-quiet --stop-screensaver=no --panscan=1.0 -fs --shuffle --playlist='$video_dir' & disown"
+cmd="mpv --no-audio --really-quiet --speed=0.5 --stop-screensaver=no --panscan=1.0 -fs --shuffle --playlist='$video_dir' & disown"
 
 # Run swayidle without exec to allow trap to work
 swayidle -w \
