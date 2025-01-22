@@ -13,7 +13,6 @@ Aerial Wayland downloads and displays high-quality aerial footage from Apple TV.
 - `wget`: For downloading videos
 - `jq`: For JSON parsing
 - `curl`: For fetching video metadata
-- `yad`: For system tray icon (optional)
 
 ## Installation
 
