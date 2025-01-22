@@ -1,15 +1,15 @@
 #!/bin/bash
 
-video_dir="$HOME/.local/share/aerial-wayland/videos"
+aerial_dir="$HOME/.local/share/aerial-wayland"  
+video_dir="$aerial_dir/videos"
 # read timeout (in minutes) from a plain text file 'aerial.config' and multiply by 60 to get seconds
-timeout=$(grep "timeout=" "$HOME/.local/share/aerial-wayland/aerial.config" | cut -d'=' -f2)
+timeout=$(grep "timeout=" "$aerial_dir/aerial.config" | cut -d'=' -f2)
 timeout=$((timeout * 60))
 playback_speed=1.0 # Need to play with settings to get slower playback without stuttering
 
 cleanup() {
     pkill mpv
     pkill swayidle
-    pkill yad
     exit 0
 }
 
